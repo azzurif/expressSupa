@@ -28,6 +28,7 @@ app.get("/users", async (req, res) => {
 			success: false,
 			message: error.message,
 		});
+		return;
 	}
 
 	res.status(200).json({
@@ -49,6 +50,7 @@ app.get("/users/:id", async (req, res) => {
 			success: false,
 			message: error.message,
 		});
+		return;
 	}
 
 	res.status(200).json({
@@ -116,6 +118,7 @@ app.delete("/users/:id", async (req, res) => {
 			success: false,
 			message: error.message,
 		});
+		return;
 	}
 
 	res.status(200).json({
